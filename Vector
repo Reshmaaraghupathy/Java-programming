@@ -1,0 +1,26 @@
+import java.util.*;
+class Collect {
+    public static void main(String args[]) {
+        Vector<String> vector = new Vector<String>();
+        vector.add("Apple");
+        vector.add("Mango");
+        vector.add("Orange");
+        vector.add("Banana");
+        System.out.println("Elements in the Vector:");
+        for (String element : vector) {
+            System.out.println(element);
+        }
+        String newElement = "Grapes";
+        vector.add(newElement);
+        System.out.println("\nElements in the updated Vector after adding " + newElement + ":");
+        for (String element : vector) {
+            System.out.println(element);
+        }
+        String elementToRemove = "Orange";
+        vector.remove(elementToRemove);
+        System.out.println("\nElements in the updated Vector after removing " + elementToRemove + ":");
+        for (String element : vector) {
+            System.out.println(element);
+        }
+    }
+}
