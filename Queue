@@ -1,0 +1,26 @@
+import java.util.LinkedList;
+import java.util.Queue;
+class Collect {
+    public static void main(String[] args) {
+        Queue<?> queue = new LinkedList<>();
+        ((Queue<Object>) queue).add("Apple");
+        ((Queue<Object>) queue).add("Mango");
+        ((Queue<Object>) queue).add("Orange");
+        ((Queue<Object>) queue).add("Banana");
+        System.out.println("Elements in the Queue:");
+        for (Object element : queue) {
+            System.out.println(element);
+        }
+        String newElement = "Grapes";
+        ((Queue<Object>) queue).add(newElement);
+        System.out.println("\nElements in the updated Queue after adding " + newElement + ":");
+        for (Object element : queue) {
+            System.out.println(element);
+        }
+        Object removedElement = ((Queue<Object>) queue).poll();
+        System.out.println("\nElements in the updated Queue after removing " + removedElement + ":");
+        for (Object element : queue) {
+            System.out.println(element);
+        }
+    }
+}
