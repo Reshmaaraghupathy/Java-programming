@@ -1,0 +1,25 @@
+class MatchingCharacters {
+    public static int findMatchingCharacters(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            System.out.println("Strings are not of the same length");
+            return -1;
+        }
+        int matchCount = 0;
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) == str2.charAt(i)) {
+                System.out.println("The matching letters are: "+charAt);
+                matchCount++;
+            }
+        }
+
+        return matchCount;
+    }
+
+    public static void main(String[] args) {
+        String string1 = "hello";
+        String string2 = "hills";
+        int result = findMatchingCharacters(string1, string2);
+
+        System.out.println("Number of matching characters: " + result);
+    }
+}
