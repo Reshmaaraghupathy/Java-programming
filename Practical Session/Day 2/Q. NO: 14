@@ -1,0 +1,69 @@
+ By increasing and decreasing no. of parameters
+CODE:
+public class Main {
+    // Original method with two parameters
+    int sum(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method with three parameters
+    int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Overloaded method with one parameter
+    int sum(int a) {
+        return a;
+    }
+
+    public static void main(String[] args) {
+        Main main = new Main();
+
+        System.out.println("Sum of 2 and 3: " + main.sum(2, 3));  // This will call the original method
+        System.out.println("Sum of 2, 3 and 4: " + main.sum(2, 3, 4));  // This will call the overloaded method with three parameters
+        System.out.println("Sum of 2: " + main.sum(2));  // This will call the overloaded method with one parameter
+    }
+}
+B.) By changing the data types of parameters
+CODE:
+public class Main {
+    // Original method with int parameters
+    int sum(int a, int b) {
+        return a + b;
+    }
+    // Overloaded method with double parameters
+    double sum(double a, double b) {
+        return a + b;
+    }
+    public static void main(String[] args) {
+        Main main = new Main();
+        System.out.println("Sum of 2 and 3: " + main.sum(2, 3));  // This will call the original method
+        System.out.println("Sum of 2.5 and 3.5: " + main.sum(2.5, 3.5));  // This will call the overloaded method with double parameters
+    }
+}
+
+C.) By interchanging the parameters
+CODE:
+public class Main {
+    // Original method
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    // Overloaded method with different types of parameters
+    public int sum(double a, double b) {
+        return (int)(a + b);
+    }
+
+    public static void main(String[] args) {
+        Main main = new Main();
+
+        // Using the first sum method
+        int sum1 = main.sum(1, 2);
+        System.out.println("Sum of two integers: " + sum1);
+
+        // Using the overloaded sum method
+        int sum2 = main.sum(1.5, 2.5);
+        System.out.println("Sum of two doubles: " + sum2);
+    }
+}
